@@ -1,25 +1,33 @@
+$black: #000000;
+$textBlack: #0C0C0C;
+$white: #ffffff;
+$lightHeader: #E8E8E8;
+$darkBackground: #C2C2C2;
+$darkHeader: #727272;
+
 .ui-list-card {
     width: 328px;
-    border: 1px solid #000000;
+    border: 1px solid $black;
     border-radius: 10px !important;
-    box-shadow: 4px 5px 4px #000000 !important;
+    box-shadow: 4px 5px 4px $black !important;
+    background-color: $white !important;
 
     header {
+        align-items: center;
+        background-color: $lightHeader;
+        color: $textBlack;
         display: flex;
         font-size: 36px;
-        color: #0C0C0C;
-        justify-content: center;
-        align-items: center;
-        background-color: #E8E8E8;
-        height: 105px
+        height: 105px;
+        justify-content: center
     };
 
     ul {
-        min-height: 320px;
+        color: $textBlack;
         font-size: 24px;
-        color: #0C0C0C;
         margin: 20px;
-
+        min-height: 320px;
+        
         li {
             margin-bottom: 10px
         }
@@ -27,17 +35,17 @@
 }
 
 .dark {
-    border-color: #ffffff;
-    box-shadow: 4px 5px 4px #ffffff !important;
-    color: #ffffff;
-    background-color: #C2C2C2 !important;
+    background-color: $darkBackground !important;
+    border-color: $white;
+    box-shadow: 4px 5px 4px $white !important;
+    color: $white;
     
     header {
-        color: #ffffff;
-        background-color: #727272;
+        background-color: $darkHeader;
+        color: $white
     };
 
     ul {
-        color: #ffffff; 
+        color: $white; 
     }
 }
