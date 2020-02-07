@@ -32,16 +32,16 @@ const styles = {
 }
 
 class ListCard extends Component {
-
+  
   render() {
+    const { header, items } = this.props
+    
     return (
       <Base style={styles.base}>
-        <header style={styles.header}>Header</header>
+        <header style={styles.header}>{header}</header>
         
         <ul style={styles.listContainer}>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
+          {items.map((item, index) => (<li key={index}>{item}</li>))}
         </ul>
       </Base>
     );
@@ -55,6 +55,8 @@ ListCard.propTypes = {
 };
 
 ListCard.defaultProps = {
+  header: "Header",
+  items: ['Item 1', 'Item 2', 'Item 3']
 };
 
 export default ListCard;
