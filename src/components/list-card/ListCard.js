@@ -35,7 +35,7 @@ class ListCard extends Component {
   
   render() {
     const { header, items } = this.props
-    
+
     return (
       <Base style={styles.base}>
         <header style={styles.header}>{header}</header>
@@ -49,9 +49,8 @@ class ListCard extends Component {
 }
 
 ListCard.propTypes = {
-  /**
-   * PropTypes go here.
-   */
+  header: PropTypes.string,
+  items: PropTypes.arrayOf(PropTypes.string)
 };
 
 ListCard.defaultProps = {
