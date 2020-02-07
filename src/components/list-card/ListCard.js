@@ -8,10 +8,11 @@ import './ListCard.scss'
 class ListCard extends Component {
   
   render() {
-    const { header, items } = this.props
+    const { header, items, theme } = this.props
+    const classes = classNames('ui-list-card', theme)
 
     return (
-      <Base className={'ui-list-card'} >
+      <Base className={classes} >
         <header>{header}</header>
         <ul>
           {items.map((item, index) => (<li key={index}>{item}</li>))}
@@ -23,12 +24,14 @@ class ListCard extends Component {
 
 ListCard.propTypes = {
   header: PropTypes.string,
-  items: PropTypes.arrayOf(PropTypes.string)
+  items: PropTypes.arrayOf(PropTypes.string),
+  theme: PropTypes.oneOf(['light', 'dark'])
 };
 
 ListCard.defaultProps = {
   header: "Header",
-  items: ['Item 1', 'Item 2', 'Item 3']
+  items: ['Item 1', 'Item 2', 'Item 3'],
+  theme: 'light'
 };
 
 export default ListCard;
