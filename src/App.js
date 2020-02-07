@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Button } from './components';
 import './App.scss';
 
+import ListCard from './components/list-card/ListCard'
+
 class App extends Component {
   render() {
     return (
@@ -10,6 +12,7 @@ class App extends Component {
           <h1>Components</h1>
         </header>
         <div className="component-list">
+          <ListCard />
           <Button href="#" theme='go'> Button </Button>
         </div>
       </div>
