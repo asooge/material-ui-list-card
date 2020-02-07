@@ -1,0 +1,26 @@
+.ui-list-card {
+    width: 328px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    header {
+        display: flex;
+        font-size: 36px;
+        color: #0C0C0C;
+        justify-content: center;
+        align-items: center;
+        background-color: #E8E8E8;
+        height: 105px
+    };
+
+    ul {
+        min-height: 320px;
+        font-size: 24px;
+        color: #0C0C0C;
+        margin: 20px;
+
+        li {
+            margin-bottom: 10px
+        }
+    }
+}
